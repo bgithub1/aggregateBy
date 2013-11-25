@@ -1,3 +1,11 @@
+
+
+This is my version of a Scott Sauyet's stackoverflow solution to the question:
+
+http://stackoverflow.com/questions/14446511/what-is-the-most-efficient-method-to-groupby-on-a-javascript-array-of-objects 
+
+See the example below 
+
 `````javascript
 
 // Group an array of json objects by values of fields in the object, creating
