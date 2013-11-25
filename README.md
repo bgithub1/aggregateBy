@@ -1,3 +1,4 @@
+`````javascript
 
 // Group an array of json objects by values of fields in the object, creating
 //  sum, sumProduct and/or weighted average totalling fields.
@@ -6,7 +7,9 @@
 // EXAMPLE:
 
 //  Let's say you have an array of json objects:
+
 var data = [
+
     { Phase: "p1", Step: "s1", Task: "t1", Qty: "5",tv:"10",Price:3.51},
     { Phase: "p1", Step: "s1", Task: "t2", Qty: "10",tv:"20",Price:3.52 },
     { Phase: "p1", Step: "s2", Task: "t1", Qty: "15",tv:"100",Price:3.53 },
@@ -40,7 +43,8 @@ var data = [
       ["Qty",["Qty"]],
       ["QtyPrice",["Price","Qty"]],
     ];
-    aggregatedDataArray = tableWeightedAverage(data,groupByCols,totallingArray);    
+    aggre
+    gatedDataArray = tableWeightedAverage(data,groupByCols,totallingArray);    
 
 //  see testJs.js for this code in use.
-
+`````
