@@ -71,12 +71,19 @@ var data = [
       );
 
       var group =  _.map(stems, function(stem) {
-          return {
+        var o = {
               key: stem,
               vals:_.map(_.where(data, stem), function(item) {
                   return _.omit(item, groupByArr);
               })
           };
+          return o;
+          // return {
+          //     key: stem,
+          //     vals:_.map(_.where(data, stem), function(item) {
+          //         return _.omit(item, groupByArr);
+          //     })
+          // };
       }, this);
 
 

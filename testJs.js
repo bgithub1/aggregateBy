@@ -100,5 +100,23 @@ $(document).ready(function(){
     __veryUglyTable("mytable4","mytableheader4",aggregatedDataArray4,allColumnsToDisplay4);
 // ************** END fourth example *******************
 
+// ************** fifth example *******************
+//    weighted average of the columns in subscript 1 (e.g. ["Price","Qty"])
+//   BUT NOT GROUP BY
+    var totalingArray5 = [
+      ["Qty",["Qty"]],
+    ];
+
+//  create new aggregated version of data 
+    var allColumnsToDisplay5 = _.union(
+        [totalingArray5[0][0]]
+    );
+
+    // aggregate the data to form weighted averages by Phase and Step
+    var aggregatedDataArray5 = tableWeightedAverage(data,[],totalingArray5);
+    // display the data
+    __veryUglyTable("mytable5","mytableheader5",aggregatedDataArray5,allColumnsToDisplay5);
+// ************** END fifth example *******************
+
 });
 // ********************  END display on load *********************
