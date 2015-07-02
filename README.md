@@ -6,6 +6,12 @@ http://stackoverflow.com/questions/14446511/what-is-the-most-efficient-method-to
 
 See the example below 
 
+TO RUN EXAMPLES: 
+1.  Assume you have git cloned the git project into the directory /Users/myhome
+2.  Open up testJs.html in your webbrowser by entering:
+      file://localhost/Users/myhome/aggregateBy/testJs.html
+  into the address bar of the browser.
+
 `````javascript
 
 // Group an array of json objects by values of fields in the object, creating
