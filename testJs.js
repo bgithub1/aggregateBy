@@ -37,7 +37,7 @@ $(document).ready(function(){
 //  create new aggregated version of data 
     var allColumnsToDisplay1 = _.union(
         groupByCols,
-        totalingArray1[0][0]);
+        [totalingArray1[0][0]]);
 
     // aggregate the data to form weighted averages by Phase and Step
     var aggregatedDataArray1 = tableSumProduct(data,groupByCols,totalingArray1);
@@ -54,7 +54,7 @@ $(document).ready(function(){
 //  create new aggregated version of data 
     var allColumnsToDisplay2 = _.union(
         groupByCols,
-        totalingArray2[0][0]);
+        [totalingArray2[0][0]]);
 
     // aggregate the data to form weighted averages by Phase and Step
     var aggregatedDataArray2 = tableSumProduct(data,groupByCols,totalingArray2);
@@ -72,12 +72,33 @@ $(document).ready(function(){
 //  create new aggregated version of data 
     var allColumnsToDisplay3 = _.union(
         groupByCols,
-        totalingArray3[0][0],
-        totalingArray3[1][0]);
+        [totalingArray3[0][0]],
+        [totalingArray3[1][0]]);
 
     // aggregate the data to form weighted averages by Phase and Step
     var aggregatedDataArray3 = tableWeightedAverage(data,groupByCols,totalingArray3);
     // display the data
     __veryUglyTable("mytable3","mytableheader3",aggregatedDataArray3,allColumnsToDisplay3);
+// ************** END third example *******************
+
+// ************** fourth example *******************
+//    weighted average of the columns in subscript 1 (e.g. ["Price","Qty"])
+//   BUT NOT GROUP BY
+    var totalingArray4 = [
+      ["Qty",["Qty"]],
+      ["Price",["Price","Qty"]],
+    ];
+
+//  create new aggregated version of data 
+    var allColumnsToDisplay4 = _.union(
+        [totalingArray4[0][0]],
+        [totalingArray4[1][0]]);
+
+    // aggregate the data to form weighted averages by Phase and Step
+    var aggregatedDataArray4 = tableWeightedAverage(data,[],totalingArray4);
+    // display the data
+    __veryUglyTable("mytable4","mytableheader4",aggregatedDataArray4,allColumnsToDisplay4);
+// ************** END fourth example *******************
+
 });
 // ********************  END display on load *********************
